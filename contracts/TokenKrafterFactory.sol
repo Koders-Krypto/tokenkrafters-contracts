@@ -4,11 +4,23 @@ pragma solidity ^0.8.20;
 import {ITokenKrafterBucket, TokenKrafterBucket} from "./TokenKrafterBucket.sol";
 
 contract TokenKrafterFactory {
+    event BucketCreated(
+        address indexed creator,
+        address indexed bucket,
+        string name,
+        string description,
+        ITokenKrafterBucket.TokenAllocation[] tokenAllocations
+    );
+
     address[] private _deployedBuckets;
     address public swapRouter;
 
     constructor(address swapRouter_) {
         swapRouter = swapRouter_;
+    }
+
+    function deployedBuckets() external view returns (address[] memory) {
+        return _deployedBuckets;
     }
 
     function createBucket(
@@ -24,5 +36,12 @@ contract TokenKrafterFactory {
             tokenAllocations
         );
         _deployedBuckets.push(address(bucket));
+        emit BucketCreated(
+            msg.sender,
+            address(bucket),
+            name,
+            description,
+            tokenAllocations
+        );
     }
 }
