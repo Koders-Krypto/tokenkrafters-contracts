@@ -11,9 +11,13 @@ contract TokenKrafterFactory {
     }
 
     function createBucket(
+        string memory name,
+        string memory description,
         ITokenKrafterBucket.TokenAllocation[] memory tokenAllocations
     ) external {
         TokenKrafterBucket bucket = new TokenKrafterBucket(
+            name,
+            description,
             msg.sender,
             swapRouter,
             tokenAllocations
