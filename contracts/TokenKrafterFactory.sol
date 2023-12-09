@@ -9,6 +9,7 @@ contract TokenKrafterFactory {
         address indexed bucket,
         string name,
         string description,
+        string tokenURI,
         ITokenKrafterBucket.TokenAllocation[] tokenAllocations
     );
 
@@ -26,11 +27,13 @@ contract TokenKrafterFactory {
     function createBucket(
         string memory name,
         string memory description,
+        string memory bucketTokenURI,
         ITokenKrafterBucket.TokenAllocation[] memory tokenAllocations
     ) external {
         TokenKrafterBucket bucket = new TokenKrafterBucket(
             name,
             description,
+            bucketTokenURI,
             msg.sender,
             swapRouter,
             tokenAllocations
@@ -41,6 +44,7 @@ contract TokenKrafterFactory {
             address(bucket),
             name,
             description,
+            bucketTokenURI,
             tokenAllocations
         );
     }
