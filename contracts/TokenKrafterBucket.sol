@@ -55,6 +55,19 @@ contract TokenKrafterBucket is ITokenKrafterBucket, ERC721 {
         return _userAllocations[tokenId];
     }
 
+    function rebalance(TokenAllocation[] calldata tokenAllocations_) external {
+        if (_msgSender() != creator) revert CallerNotBucketCreator();
+        uint256 totalWeightage;
+        for (uint256 i; i < tokenAllocations_.length; ++i) {
+            _tokenAllocations[i] = tokenAllocations_[i];
+            totalWeightage += tokenAllocations_[i].weightage;
+        }
+        if (totalWeightage != 100000) {
+            revert InvalidTotalWeightage();
+        }
+        emit Rebalanced(_msgSender(), tokenAllocations_);
+    }
+
     function invest(address tokenIn, uint256 amount) external {
         IERC20(tokenIn).transferFrom(_msgSender(), address(this), amount);
         uint256 tokenId = _nextTokenId++;
@@ -95,6 +108,19 @@ contract TokenKrafterBucket is ITokenKrafterBucket, ERC721 {
         }
         _safeMint(_msgSender(), tokenId);
         emit Invested(_msgSender(), tokenIn, amount, tokenId, userAllocation_);
+    }
+
+    function withdraw(uint256 tokenId) external {
+        if (ownerOf(tokenId) != _msgSender()) revert NotOwnerOfNFT();
+        UserAllocation[] memory userAllocation_ = _userAllocations[tokenId];
+        for (uint i; i < userAllocation_.length; ++i) {
+            IERC20(userAllocation_[i].tokenAddress).transfer(
+                _msgSender(),
+                userAllocation_[i].amount
+            );
+        }
+        _burn(tokenId);
+        emit Withdraw(_msgSender(), tokenId);
     }
 
     function tokenURI(
