@@ -4,6 +4,7 @@ pragma solidity ^0.8.20;
 import {ITokenKrafterBucket, TokenKrafterBucket} from "./TokenKrafterBucket.sol";
 
 contract TokenKrafterFactory {
+    address[] private _deployedBuckets;
     address public swapRouter;
 
     constructor(address swapRouter_) {
@@ -22,5 +23,6 @@ contract TokenKrafterFactory {
             swapRouter,
             tokenAllocations
         );
+        _deployedBuckets.push(address(bucket));
     }
 }
