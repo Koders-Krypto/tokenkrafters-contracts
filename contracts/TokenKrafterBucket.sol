@@ -41,6 +41,20 @@ contract TokenKrafterBucket is ITokenKrafterBucket, ERC721 {
         }
     }
 
+    function tokenAllocations()
+        external
+        view
+        returns (TokenAllocation[] memory)
+    {
+        return _tokenAllocations;
+    }
+
+    function userAllocations(
+        uint256 tokenId
+    ) external view returns (UserAllocation[] memory) {
+        return _userAllocations[tokenId];
+    }
+
     function invest(address tokenIn, uint256 amount) external {
         IERC20(tokenIn).transferFrom(_msgSender(), address(this), amount);
         uint256 tokenId = _nextTokenId++;
