@@ -17,6 +17,7 @@ Token Krafter Deployments
 # Arbitrum Goerli
 TokenKrafterFactory
 https://goerli.arbiscan.io/address/0x465b5872fd5565f78cd723b08c686df4b5e85b3f
+
 SwapRouter
 0xd6119e5787389fCf8B8E5791aAC5e2C3Fe002e29  
   WBTC: '0x0eeb64ca7072f27506c44a2a9f08fd8cae5d8283',
@@ -38,6 +39,7 @@ SwapRouter
 # Polygon Mumbai
 TokenKrafterFactory
 https://mumbai.polygonscan.com/address/0x1226FEf96A2f3c3d2d1d0522d2AFA580a9BF726e
+
 SwapRouter
 0xE592427A0AEce92De3Edee1F18E0157C05861564
 
@@ -60,6 +62,7 @@ WBTC: '0x32d72a04a9cef882f32efba2618c56a4df99e979',
 # Scroll Sepolia
 TokenKrafterFactory
 https://sepolia-blockscout.scroll.io/address/0x041916125514fbd39a6b192a98aec5dc519dd4b0
+
 SwapRouter
 0x9aBC24f61d4ea7f17Db15f2b022096ff174Fb312
   WBTC: '0x0b344563ceea1abed9ecf07b0ef131ab43bf2138',
@@ -81,6 +84,7 @@ SwapRouter
 # Celo
 TokenKrafterFactory
 https://explorer.celo.org/alfajores/address/0x9abc24f61d4ea7f17db15f2b022096ff174fb312
+
 SwapRouter
 0x5615CDAb10dc425a742d643d949a7F474C01abc4
   WBTC: '0x041916125514fbd39a6b192a98aec5dc519dd4b0',
@@ -102,6 +106,7 @@ SwapRouter
 # Base
 TokenKrafterFactory
 https://goerli.basescan.org/address/0x283e267a411a7bc5d37c25528a0b6aa3ba9c6719
+
 SwapRouter
 0xB33b6207D126C466E9FC6038765C449328c97552
   WBTC: '0xa3d824993f93488ed7ba927810048ba01816ff03',
