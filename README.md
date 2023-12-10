@@ -14,9 +14,9 @@ npx hardhat run scripts/deploy.ts
 
 Token Krafter Deployments
 
-Arbitrum Goerli
+# Arbitrum Goerli
 TokenKrafterFactory
-0x465b5872fd5565f78cd723b08c686df4b5e85b3f
+https://goerli.arbiscan.io/address/0x465b5872fd5565f78cd723b08c686df4b5e85b3f
 SwapRouter
 0xd6119e5787389fCf8B8E5791aAC5e2C3Fe002e29  
   WBTC: '0x0eeb64ca7072f27506c44a2a9f08fd8cae5d8283',
@@ -35,9 +35,9 @@ SwapRouter
   LDO: '0x089ce8d156c7e9b2066b04b7e905c78e83547379',
   RPL: '0x575e857ffba2b0e27db0f603883aea8dfa2faa89'
 
-Polygon Mumbai
+# Polygon Mumbai
 TokenKrafterFactory
-0x1226FEf96A2f3c3d2d1d0522d2AFA580a9BF726e
+https://mumbai.polygonscan.com/address/0x1226FEf96A2f3c3d2d1d0522d2AFA580a9BF726e
 SwapRouter
 0xE592427A0AEce92De3Edee1F18E0157C05861564
 
@@ -57,9 +57,9 @@ WBTC: '0x32d72a04a9cef882f32efba2618c56a4df99e979',
   LDO: '0x843695e78cac59700359ece16abc571a9b30e726',
   RPL: '0x78c6a3bba15059802d5b158d7e47a9bc278762ac'
 
-Scroll Sepolia
+# Scroll Sepolia
 TokenKrafterFactory
-0x041916125514fbd39a6b192a98aec5dc519dd4b0
+https://sepolia-blockscout.scroll.io/address/0x041916125514fbd39a6b192a98aec5dc519dd4b0
 SwapRouter
 0x9aBC24f61d4ea7f17Db15f2b022096ff174Fb312
   WBTC: '0x0b344563ceea1abed9ecf07b0ef131ab43bf2138',
@@ -78,9 +78,9 @@ SwapRouter
   LDO: '0x10e0c54f11fb09bc0fca66c63a69386644b29133',
   RPL: '0xfb92584506b7fb3736fb8b8f5ea38963d07ac262'
 
-#Celo
+# Celo
 TokenKrafterFactory
-0x9abc24f61d4ea7f17db15f2b022096ff174fb312
+https://explorer.celo.org/alfajores/address/0x9abc24f61d4ea7f17db15f2b022096ff174fb312
 SwapRouter
 0x5615CDAb10dc425a742d643d949a7F474C01abc4
   WBTC: '0x041916125514fbd39a6b192a98aec5dc519dd4b0',
@@ -99,9 +99,9 @@ SwapRouter
   LDO: '0x47a3988bcb70b7498c85ccbd9049b2e025c6eedf',
   RPL: '0x3c37b508c53917c86bb477e0dceefd8aa2f6abc1'
 
-Base
+# Base
 TokenKrafterFactory
-0x283e267a411a7bc5d37c25528a0b6aa3ba9c6719
+https://goerli.basescan.org/address/0x283e267a411a7bc5d37c25528a0b6aa3ba9c6719
 SwapRouter
 0xB33b6207D126C466E9FC6038765C449328c97552
   WBTC: '0xa3d824993f93488ed7ba927810048ba01816ff03',
